@@ -4,6 +4,9 @@ import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
+import PlanScreen from '../screens/PlanScreen';
+import TrainScreen from '../screens/TrainScreen';
+import VideoScreen from '../screens/VideoScreen';
 import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -28,6 +31,9 @@ function RootNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Root" component={BottomTabNavigator} />
+      <Stack.Screen name="Plan" component={PlanScreen} />
+      <Stack.Screen name="Train" component={TrainScreen} />
+      <Stack.Screen name="Video" component={VideoScreen} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );
